@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>下拉及多级弹出式菜单www.aa25.cn</title>
+    <script type="text/javascript"><!--//--><![CDATA[//><!--
+    startList = function() {
+        if (document.all&&document.getElementById) {
+            navRoot = document.getElementById("nav");
+            for (i=0; i<navRoot.childNodes.length; i++) {
+                node = navRoot.childNodes[i];
+                if (node.nodeName=="LI") {
+                    node.onmouseover=function() {
+                        this.className+=" over";
+                    }
+                    node.onmouseout=function() {
+                        this.className=this.className.replace(" over", "");
+                    }
+                }
+            }
+        }
+    }
+    window.onload=startList;
+
+    //--><!]]></script>
+    <style>
+        ul { padding:0; margin:0; list-style:none;}
+        li { float:left; width:100px;}
+        ul li a { display:block; font-size:12px; border:1px solid #ccc; margin-top:2px; margin-left:3px; padding:3px; text-decoration:none; color:#777;}
+        ul li a:hover { background-color:#ddd;}
+        li ul { display:none;}
+        li:hover ul,.over ul { display:block;}
+        .m{
+            width: 100px;
+            height: 100px;
+            background-color: #00ee00;
+        }
+    </style>
+</head>
+
+<body>
+<ul id="nav">
+    <li><a href="">文章</a>
+        <ul>
+            <li><a href="">CSS教程</a></li>
+            <li><a href="">DOM教程</a></li>
+            <li><a href="">XML教程</a></li>
+            <li><a href="">FLASH教程</a></li>
+        </ul>
+    </li>
+    <li><a href="">参考</a>
+        <ul>
+            <li><a href="">XHTML</a></li>
+            <li><a href="">XML</a></li>
+            <li><a href="">CSS</a></li>
+        </ul>
+    </li>
+    <li><a href="">BLOG</a>
+        <ul>
+            <li><a href="">全部</a></li>
+            <li><a href="">网页技术</a></li>
+            <li><a href="">UI技术</a></li>
+            <li><a href="">FLASH技术</a></li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li><a href="">摇滚</a></li>
+    <li><a href="">纯音乐</a></li>
+    <li><a href="">古典金曲</a></li>
+    <li><a href="">电影原声</a></li>
+</ul>
+<div class="easy-m m"></div>
+</body>
+</html>
