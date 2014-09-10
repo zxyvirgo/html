@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/> 
+</head> 
+<body> 
+<ul id="ul-list">
+</ul>
+<mce:script type="text/javascript"><!--
+var UI = {
+    pageHeight: function() {
+        return document.body.scrollHeight || document.documentElement.scrollHeight
+    },
+    windowHeight: function () {
+        var a = document.documentElement;
+        return self.innerHeight || a && a.clientHeight || document.body.clientHeight
+    },
+    scrollY: function (a) {
+        var b = document.documentElement;
+        if (a) {
+            var c = a.parentNode,
+                e = a.scrollTop || 0;
+            if (a == b) e = UI.scrollY();
+            return c ? e + UI.scrollY(c) : e
+        }
+        return self.pageYOffset || b && b.scrollTop || document.body.scrollTop
+    }
+};
+
+var Utils = {
+	randomChar: function(l)  {
+		var x = "0123456789qwertyuioplkjhgfdsazxcvbnm";
+		var tmp = "";
+		for(var i=0; i < l; i++)  {
+			tmp += x.charAt(Math.ceil(Math.random() * 100000000) % x.length);
+		}
+		return tmp;
+	}
+};
+
+var ul = document.getElementById('ul-list');
+for(var i = 0; i < 50; i++) {
+	var li = document.createElement("li");
+	li.innerHTML = 'hfahe';
+	ul.appendChild(li);
+}
+
+var scoll_time = 0;
+
+window.onscroll = function() {
+	if(scoll_time < 10 & UI.pageHeight() - UI.scrollY() - UI.windowHeight() < 60) {
+		var ul_list = document.getElementById('ul-list');
+		var new_li = document.createElement('li');
+		new_li.innerHTML = Utils.randomChar(5);
+		ul_list.appendChild(new_li);
+
+		scoll_time++;
+	}
+}
+// --></mce:script>
+</body> 
+</html>

@@ -1,0 +1,119 @@
+
+
+body{
+margin-left: 200px;
+}
+.one{
+    position: relative;
+    width: 550px;
+    height:190px;
+}
+.name{
+    width:150px;
+    height:80px;
+    position: absolute;
+    left: 20px;
+    font-size:40px;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+
+}
+.conection{
+
+    width:250px;
+    height: 80px;
+    position: absolute;
+    left: 150px;
+    font-weight:bold;
+    margin-bottom: 10px;
+}
+.desire{
+    position: absolute;
+    top:80px;
+    width: 350px;
+}
+.left{
+    width: 400px;
+}
+.right{
+    position: absolute;
+    left: 400px;
+}
+img{
+    width: 150px;
+    height: 200px;
+}
+
+ul{
+    list-style-type: none;
+
+}
+div>ul>li:first-child{
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#0092DC,endColorStr=#f6f6f8); /*IE*/
+    background:-moz-linear-gradient(top,#0092DC,#f6f6f8);/*火狐*/
+    background:-webkit-gradient(linear, 0% 0%, 100% 0%,from(#0092DC), to(#f6f6f8));/*谷歌*/
+    font-weight: bold;
+}
+
+/*.intern span{
+    position: absolute;
+    font-weight: bold;
+    z-index: 1;
+    margin-bottom: 20px;
+}*/
+
+.project{
+    width: 510px;
+    font-weight: bold;
+    background-color: #888888;
+}
+/*.intern div{
+    position: absolute;
+    background-color: #888888;
+    z-index: -1;
+    opacity: 0.5;
+    width: 510px;
+    height: 20px;
+}*/
+p{
+    margin-top: 10px;
+    text-indent:2em
+}
+.content{
+    width: 550px;
+}
+[name="email"]{
+    background-image: url("./image/email.png");
+}
+a{
+    color:#06C;
+    padding-left: 30px;
+    text-decoration:none;
+    background-size: 30px;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+[name="tel"]{
+    background-image: url("./image/tel.png");
+}
+[name="github"]{
+    padding-top:3px;
+    background-image: url("./image/github.png");
+}
+.blank {
+    display: none;
+    margin: 10px;
+    width: 20px;
+}
+
+.education{
+    width: 520px;
+}
+.awards td:first-child{
+    width:100px;
+}
+.awards td:last-child{
+    padding-left: 40px;
+}
+
